@@ -5,10 +5,10 @@ public class GrandPetit {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        final int nombreMystere = (int)(Math.random() * 101);
+        final int nombreMystere = (int)(Math.random() * 100);
         int proposition;
         int compteur = 0;
-        System.out.println("Le nombre mystère à été choisi, essayez de le deviner");
+        System.out.println("Le nombre mystère à été choisi, essayez de le deviner" + nombreMystere);
 
         do {
             System.out.print("Votre proposition : ");
@@ -17,13 +17,14 @@ public class GrandPetit {
                 System.out.println("ç'est plus grand");
             } else if (proposition > nombreMystere) {
                 System.out.println("ç'est plus petit");
-            } else {
-                System.out.println("Bravo, trouvé en : " + compteur + " essais");
             }
+
+
 
 
         } while (proposition != nombreMystere);
 
+        System.out.println("Bravo, trouvé en : " + compteur + " essais");
         scanner.close();
     }
     
